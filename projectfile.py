@@ -121,7 +121,18 @@ def sort_by_rank(ranklist_canteens):
 #Search all canteens to return the food within the searched range
 #Keith
 def search_by_price(price,foodlist_canteens):
-    pass
+     pricefood = { '' : }
+     # price threshold howmuch = input(float("What is your budget?"))
+     for item in datalist.canteendata[i]['Food Price']:
+          priceofitem = datalist.canteendata[i]['Food Price'][item]
+          if priceofitem <= howmuch:
+               pricefood.append(item)
+          else:
+               continue
+     #print("The food within your budget at this place are:", pricefood)
+     return pricefood      
+
+
 
 #To return coordinate of a mouseclick
 #Raysheng
